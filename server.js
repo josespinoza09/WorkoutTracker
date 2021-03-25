@@ -24,3 +24,12 @@ app.get('/exercise', (req, res) => {
     res.redirect('/exercise.html')
 });
 
+app.get('/stats', (req, res) => {
+    res.redirect('/stats.html')
+});
+
+app.post('/api/workouts', async (req, res) => {
+    const postWorkout = await db.Workout.create({})
+    res.json(postWorkout)
+});
+
