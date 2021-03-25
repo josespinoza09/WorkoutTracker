@@ -13,3 +13,16 @@ The user should be able to:
   * View the combined weight of multiple exercises from the past seven workouts on the stats page.
 
   * View the total duration of each workout from the past seven workouts on the stats page.
+
+  Screenshots:
+
+  ![1](public/Assets/Screenshot1.png?raw=true)
+
+  ![2](public/Assets/Screenshot2.png?raw=true)
+
+  ![3](public/Assets/Screenshot3.png?raw=true)
+
+  ![4](public/Assets/Screenshot4.png?raw=true)
+
+  App:
+  
