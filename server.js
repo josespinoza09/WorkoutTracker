@@ -33,3 +33,30 @@ app.post('/api/workouts', async (req, res) => {
     res.json(postWorkout)
 });
 
+app.get('/api/workouts', async (req, res) => {
+    const getWorkout = await db.Workout.aggregate([{
+        $addFields: {
+            totalDuration: {
+                $sum: '$exercises.duration',
+            }
+        }
+    }])
+    console.log(getWorkout)
+    res.json(getWorkout)
+});
+
+app.put('/api/workouts/:id', async (req, res) => {
+    const id = req.params.id
+    const body = req.body
+    const updateWorkout = await db.Workout.findByIdAndUpdate(
+        id,
+        {
+            $push:
+            {
+                exercises: body
+            }
+        }
+    )
+    res.send(updateWorkout)
+})
+
