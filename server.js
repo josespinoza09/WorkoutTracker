@@ -20,3 +20,7 @@ mongoose.connect(
     }
 );
 
+app.get('/exercise', (req, res) => {
+    res.redirect('/exercise.html')
+});
+
